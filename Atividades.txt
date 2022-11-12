@@ -1,9 +1,9 @@
-# Tarefa 1: 
+# Tarefa 1:
 Explique detalhadamente como funciona o predicado tell_me_about(X) . Na sua
 explicação, diga também como funciona qualquer outro predicado que ele utilize, diretamente ou
 indiretamente.
 
-# Tarefa 2: 
+# Tarefa 2:
 Vamos ignorar daqui em diante as informações a respeito se cada um dos personagens
 está vivo ou morto, e considerar como se todos eles estivessem vivos. Faça um predicado para
 computar o número de indivíduos de cada clã. O código do github possui seções separadas para
@@ -16,16 +16,16 @@ Predicados presentes no SWI, tais como atom_string, findall, sub_string, sub_ato
 lhes ser úteis. Sua regra deve se chamar house_of(X, Y), que retorna em Y o nome do clã de X
 (considere o nome que está nos comentários).
 
-# Tarefa 3: 
+# Tarefa 3:
 O poder de um clã está ligado ao número de indivíduos que ele possui. Faça um
 predicado power_of(X, Y) que retorna em Y o poder do clã X, medido como o número de
 indivíduos em X.
 
-# Tarefa 4: 
+# Tarefa 4:
 Vamos assumir que todos aqueles que não têm filhos são solteiros. Faça um predicado
 is_single(X) que é verdadeiro para X se ele não possui filhos (use parent).
 
-# Tarefa 5: 
+# Tarefa 5:
 Um clã está sempre em busca de ampliar o seu poder através de casamentos. Assuma que
 quando um indivíduo X de um clã casa com um indivíduo Y de outro clã, ele traz como aliados,
 além de Y, todos os ancestrais de Y, bem como as irmãs e irmãos, tios, tias, sobrinhos e sobrinhas de
@@ -34,7 +34,7 @@ marriage_power(X, Y, Z), que retorna em Z quantos aliados X conquistaria ao se c
 com Y. Entretando, caso X ou Y não sejam solteiros, o predicado deve retornar falso. Neste reino
 antigo, os casamentos são permitidos apenas entre pessoas solteiras de sexos opostos.
 
-# Tarefa 6: 
+# Tarefa 6:
 Crie um predicado power_by_marriage(X, Y, Z) que será usado fornecendo em
 X um nome de um clã. O predicado retornará em Y uma lista de pares (indivíduo1, indivíduo2)
 onde cada indivíduo1 é um personagem do clã X e indivíduo2 é um personagem de outro clã, tal
