@@ -1,1 +1,39 @@
-a
+Tarefa 1: Explique detalhadamente como funciona o predicado tell_me_about(X) . Na sua
+explicação, diga também como funciona qualquer outro predicado que ele utilize, diretamente ou
+indiretamente.
+
+Tarefa 2: Vamos ignorar daqui em diante as informações a respeito se cada um dos personagens
+está vivo ou morto, e considerar como se todos eles estivessem vivos. Faça um predicado para
+computar o número de indivíduos de cada clã. O código do github possui seções separadas para
+declaração da relação ‘parent’ em relação a cada clã, com um comentário antes como ‘% House
+Stark’ etc. Considere que os personagens listados em cada bloco pertecem ao clã correspondente.
+Entretanto, não declare explicitamente um fato para cada personagem dizendo a que clã ele
+corresponde. Você deve programar uma regra, que usa o sufixo do nome do personagem
+(sobrenome) para deduzir que a que clã ele pertence, levando em consideração as exceções.
+Predicados presentes no SWI, tais como atom_string, findall, sub_string, sub_atom, setof, poderão
+lhes ser úteis. Sua regra deve se chamar house_of(X, Y), que retorna em Y o nome do clã de X
+(considere o nome que está nos comentários).
+
+Tarefa 3: O poder de um clã está ligado ao número de indivíduos que ele possui. Faça um
+predicado power_of(X, Y) que retorna em Y o poder do clã X, medido como o número de
+indivíduos em X.
+
+Tarefa 4: Vamos assumir que todos aqueles que não têm filhos são solteiros. Faça um predicado
+is_single(X) que é verdadeiro para X se ele não possui filhos (use parent).
+Tarefa 5: Um clã está sempre em busca de ampliar o seu poder através de casamentos. Assuma que
+quando um indivíduo X de um clã casa com um indivíduo Y de outro clã, ele traz como aliados,
+além de Y, todos os ancestrais de Y, bem como as irmãs e irmãos, tios, tias, sobrinhos e sobrinhas de
+Y, desde que não sejam do mesmo clã de X (porque aí já seriam aliados). Faça um predicado
+marriage_power(X, Y, Z), que retorna em Z quantos aliados X conquistaria ao se casar
+com Y. Entretando, caso X ou Y não sejam solteiros, o predicado deve retornar falso. Neste reino
+antigo, os casamentos são permitidos apenas entre pessoas solteiras de sexos opostos.
+
+Tarefa 6: Crie um predicado power_by_marriage(X, Y, Z) que será usado fornecendo em
+X um nome de um clã. O predicado retornará em Y uma lista de pares (indivíduo1, indivíduo2)
+onde cada indivíduo1 é um personagem do clã X e indivíduo2 é um personagem de outro clã, tal
+que esse casamento é recomendado para aumentar o poder do clã X, conforme descrito na tarefa
+anterior. Note que cada indivíduo solteiro de X deve estar exatamente em um único par, assim como
+cada indivíduo2 (solteiro, de outro clã) deve aparecer uma única vez na lista. Em Z deve ser 
+retornado quantos novos aliados serão conquistados se esses casamentos forem realizados. Tente
+implementar de forma que a lista aumente o poder do clã X ao máximo (que você conseguir
+implementar). Explique a sua estratégia no relatório de entrega.
